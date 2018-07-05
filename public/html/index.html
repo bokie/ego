@@ -1,15 +1,724 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="user-scalable=no, width=device-width">
-    <meta name="description" content="ego"/>
-    <meta name="keywords" content="ego"/>
-    <title>ego</title>
-    <link href="../common/base.css" rel="stylesheet"/>
-    <link href="../page/index.css" rel="stylesheet"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width">
+	<meta name="description" content="ego"/>
+	<meta name="keywords" content="ego"/>
+	<title>ego</title>
+	<link href="../common/base.css" rel="stylesheet"/>
+	<link href="../page/index.css" rel="stylesheet"/>
 </head>
 <body>
+	<!-- 顶栏 -->
+	<header class="g-header">
+		<div class="g-container">
+			<div class="u-logo">
+				<a href="#" class="logo"><img src="../common/image/logo.jpg" alt=""></a>
+			</div>
+			<div class="m-tabs" id="j_tabs">
+				<ul class="f-cb">
+					<li class="z-active" data-index="0"><a href="/index">首页</a></li>
+					<li data-index="1"><a href="/works">作品</a></li>
+					<li data-index="2"><a href="">圈子</a></li>
+					<li data-index="3"><a href="">奇思妙想</a></li>
+				</ul>
+				<div class="tabs-track">
+					<div class="tabs-thumb j_tabs_thumb" style="width: 68px; left: 0"></div>
+				</div>
+			</div>
+			<!-- 搜索框 -->
+			<div class="u-search">
+				<form action="/search">
+					<input type="text" class="keyword" id="j_keyword" name="keyword" placeholder="输入搜索内容">
+					<button class="u-icon icon-search u-icon-btn"></button>
+				</form>
+			</div>
+			<!-- 登录/注册 -->
+			<div class="m-user f-cb" id="guest">
+				<button class="u-btn u-btn-primary u-btn-icon" id="j_login">
+					<i class="u-icon icon-user"></i>登 录
+				</button>
+				<button class="u-btn u-btn-link" id="j_register">注册</button>
+			</div>
+
+			<!-- 用	户登录时信息 -->
+			<div class="m-user f-cb f-dn" id="userdropdown">
+				<div class="user-info f-cb">
+					<span class="user-avatar"><img src="" alt=""></span>
+					<span>
+						<span class="user-name" id="name">Amberssssssddd</span>
+						<span class="u-icon user-gender icon-female"></span>
+					</span>
+					<span class="down u-icon icon-bottom"></span>
+				</div>
+				<ul class="user-list">
+					<li><a href="">个人中心</a></li>
+					<li><a href="">信息</a></li>
+					<li><a href="">设置</a></li>
+					<li id="logout"><a href="">退出账号</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- banner -->
+	<div class="g-banner" id="j_banner">
+		<!-- 动态构建轮播图 -->
+	</div>
+
+	<!-- main -->
+	<div class="g-body f-cb">
+		<div class="g-main">
+			
+			<section class="m-section m-recommend">
+				<div class="section-header">
+					<div class="title f-fl">
+						<i class="u-icon icon-integral"></i>
+						<span class="name">/精选推荐/</span>
+					</div>
+					<a href="#" class="more f-fr f-cb">
+						<span class="txt">更&nbsp;&nbsp;多</span>
+						<span class="icon"><i class="u-icon icon-right"></i></span>
+					</a>
+				</div>
+				<div class="section-body">
+					<ul class="recommend-list f-cb">
+						<li class="item"><img src="" alt=""></li>
+						<li class="item"><img src="" alt=""></li>
+						<li class="item"><img src="" alt=""></li>
+						<li class="item"><img src="" alt=""></li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="m-section m-recommend-people">
+				<div class="section-header">
+					<div class="title f-fl">
+						<i class="u-icon icon-star"></i>
+						<span class="name">/明日之星/</span>
+					</div>
+					<a href="#" class="more f-fr">
+						<span class="txt">更&nbsp;&nbsp;多</span>
+						<div class="icon"><i class="u-icon icon-right"></i></div>
+					</a>
+				</div>
+				<div class="section-body f-cb">
+					<ul class="m-list" id="starlist">
+						<li class="m-card f-cb">
+							<div class="card-info f-fl">
+								<div class="card-avatar f-fl">
+									<img src="" />
+								</div>
+								<div class="user-info f-fl">
+									<div class="nick">Grinch</div>
+									<div class="brief">
+										<span>作品 337</span><span>粉丝 1706</span>
+									</div>
+								</div>
+							</div>
+							<button class="u-btn u-btn-sm u-btn-primary z-follow f-fr" data-userid="10">
+								<span class="u-icon"></span>√ 已关注
+							</button>
+						</li>
+						<li class="m-card f-cb">
+							<div class="card-info f-fl">
+								<div class="card-avatar f-fl">
+									<img src="" />
+								</div>
+								<div class="user-info f-fl">
+									<div class="nick">Grinch</div>
+									<div class="brief">
+										<span>作品 337</span><span>粉丝 1706</span>
+									</div>
+								</div>
+							</div>
+							<button class="u-btn u-btn-sm u-btn-primary z-follow f-fr" data-userid="10">
+								<span class="u-icon"></span>√ 已关注
+							</button>
+						</li>
+						<li class="m-card f-cb">
+							<div class="card-info f-fl">
+								<div class="card-avatar f-fl">
+									<img src="" />
+								</div>
+								<div class="user-info f-fl">
+									<div class="nick">Grinch</div>
+									<div class="brief">
+										<span>作品 337</span><span>粉丝 1706</span>
+									</div>
+								</div>
+							</div>
+							<button class="u-btn u-btn-sm u-btn-primary z-follow f-fr" data-userid="10">
+								<span class="u-icon"></span>√ 已关注
+							</button>
+						</li>
+
+						<li class="m-card f-cb">
+							<div class="card-info f-fl">
+								<div class="card-avatar f-fl">
+									<img src="" />
+								</div>
+								<div class="user-info f-fl">
+									<div class="nick">Grinch</div>
+									<div class="brief">
+										<span>作品 337</span><span>粉丝 1706</span>
+									</div>
+								</div>
+							</div>
+							<button class="u-btn u-btn-sm u-btn-primary z-follow f-fr" data-userid="10">
+								<span class="u-icon"></span>√ 已关注
+							</button>
+						</li>
+
+						<li class="m-card f-cb">
+							<div class="card-info f-fl">
+								<div class="card-avatar f-fl">
+									<img src="" />
+								</div>
+								<div class="user-info f-fl">
+									<div class="nick">Grinch</div>
+									<div class="brief">
+										<span>作品 337</span><span>粉丝 1706</span>
+									</div>
+								</div>
+							</div>
+							<button class="u-btn u-btn-sm u-btn-primary z-follow f-fr" data-userid="10">
+								<span class="u-icon"></span>√ 已关注
+							</button>
+						</li>
+
+						<li class="m-card f-cb">
+							<div class="card-info f-fl">
+								<div class="card-avatar f-fl">
+									<img src="" />
+								</div>
+								<div class="user-info f-fl">
+									<div class="nick">Grinch</div>
+									<div class="brief">
+										<span>作品 337</span><span>粉丝 1706</span>
+									</div>
+								</div>
+							</div>
+							<button class="u-btn u-btn-sm u-btn-primary z-unfollow f-fr" data-userid="10">
+								<span class="u-icon"></span>+ 关注
+							</button>
+						</li>
+					</ul>
+				</div>
+			</section>	
+
+			<section class="m-section m-newest-work">
+				<div class="section-header">
+					<div class="title f-fl">
+						<i class="u-icon icon-date"></i>
+						<span class="name">/最新作品/</span>
+					</div>
+					<a href="#" class="more f-fr">
+						<span class="txt">更&nbsp;&nbsp;多</span>
+						<div class="icon"><i class="u-icon icon-right"></i></div>
+					</a>
+				</div>
+				<div class="section-body m-list-style">
+					<ul class="work-list f-cb">
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+					</ul>
+				</div>
+			</section>	
+
+			<section class="m-section m-activity">
+				<div class="section-header">
+					<div class="title f-fl">
+						<i class="u-icon icon-time"></i>
+						<span class="name">/活动进行时/</span>
+					</div>
+					<a href="#" class="more f-fr">
+						<span class="txt">更&nbsp;&nbsp;多</span>
+						<div class="icon"><i class="u-icon icon-right"></i></div>
+					</a>
+				</div>
+				<div class="section-body">
+					<ul class="activity-list">
+						<li class="activity-item f-cb">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-option f-fr">
+								<button class="u-btn u-btn-primary">快来PK</button><button class="u-btn u-btn-primary">邀请小伙伴</button>
+							</div>
+						</li>
+						<li class="activity-item f-cb">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-option f-fr">
+								<button class="u-btn u-btn-primary">快来PK</button><button class="u-btn u-btn-primary">邀请小伙伴</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>	
+
+			<section class="m-section">
+				<div class="section-header">
+					<div class="title f-fl">
+						<i class="u-icon icon-love"></i>
+						<span class="name">/我们爱原创/</span>
+					</div>
+					<a href="#" class="more f-fr">
+						<span class="txt">更&nbsp;&nbsp;多</span>
+						<div class="icon"><i class="u-icon icon-right"></i></div>
+					</a>
+				</div>
+				<div class="section-body m-list-style m-list-style2">
+					<ul class="work-list f-cb">
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="m-section">
+				<div class="section-header">
+					<div class="title f-fl">
+						<i class="u-icon icon-peoples"></i>
+						<span class="name">/我们都是同人粉/</span>
+					</div>
+					<a href="#" class="more f-fr">
+						<span class="txt">更&nbsp;&nbsp;多</span>
+						<div class="icon"><i class="u-icon icon-right"></i></div>
+					</a>
+				</div>
+				<div class="section-body m-list-style m-list-style2">
+					<ul class="work-list f-cb">
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="m-section m-copy-work">
+				<div class="section-header">
+					<div class="title f-fl">
+						<i class="u-icon icon-edit"></i>
+						<span class="name">/看谁临摹的最好/</span>
+					</div>
+					<a href="#" class="more f-fr">
+						<span class="txt">更&nbsp;&nbsp;多</span>
+						<div class="icon"><i class="u-icon icon-right"></i></div>
+					</a>
+				</div>
+				<div class="section-body m-list-style m-list-style2">
+					<ul class="work-list f-cb">
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+						<li class="list-item">
+							<div class="item-img">
+								<img src="" alt="">
+							</div>
+							<div class="item-name"><span>我是作品名称</span></div>
+						</li>
+					</ul>
+				</div>
+			</section>	
+
+		</div>
+		<div class="g-side">
+			<section class="m-my-work g-side-section">
+				<div class="header">
+					<div class="title">我的作品</div>
+					<div class="option f-cb">
+						<div class="u-option-down f-fr">
+							<i class="u-icon icon-bottom"></i>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="img">
+						<img src="" alt="">
+					</div>
+				</div>
+			</section>
+
+			<section class="m-group g-side-section">
+				<div class="header">
+					<div class="active-group">活跃圈子</div>
+					<div class="create-group"><a href="">创建圈子</a></div>
+				</div>
+				<div class="content">
+					<ul class="group-list">
+						<li class="list-item f-cb">
+							<div class="group-avatar"><img src="" alt=""></div>
+							<div class="group-info f-cb">
+								<div class="name">
+									门口小贩
+								</div>
+								<div class="info">
+									<span>已圈</span>&nbsp;&nbsp;<span>5221人</span>
+								</div>
+							</div>
+						</li>
+						<li class="list-item f-cb">
+							<div class="group-avatar"><img src="" alt=""></div>
+							<div class="group-info f-cb">
+								<div class="name">
+									门口小贩
+								</div>
+								<div class="info">
+									<span>已圈</span>&nbsp;&nbsp;<span>5221人</span>
+								</div>
+							</div>
+						</li>
+						<li class="list-item f-cb">
+							<div class="group-avatar"><img src="" alt=""></div>
+							<div class="group-info f-cb">
+								<div class="name">
+									门口小贩
+								</div>
+								<div class="info">
+									<span>已圈</span>&nbsp;&nbsp;<span>5221人</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<a href="#" class="m-option-more">
+						<span class="txt">更多</span><span class="u-option-right"><i class="u-icon icon-right"></i></span>
+					</a >
+				</div>
+			</section>
+
+			<section class="m-hot-topics g-side-section">
+				<div class="header">
+					<h3>热门话题</h3>
+				</div>
+				<div class="content">
+					<ul class="topic-list">
+						<li class="topic-item"><a href=""><h4>1.【萝莉学院】你不知道的那些事儿，这是标题标题</h4></a></li>
+						<li class="topic-item"><a href=""><h4>1.【萝莉学院】你不知道的那些事儿，这是标题标题</h4></a></li>
+						<li class="topic-item"><a href=""><h4>1.【萝莉学院】你不知道的那些事儿，这是标题标题</h4></a></li>
+						<li class="topic-item"><a href=""><h4>1.【萝莉学院】你不知道的那些事儿，这是标题标题</h4></a></li>
+						<li class="topic-item"><a href=""><h4>1.【萝莉学院】你不知道的那些事儿，这是标题标题</h4></a></li>
+					</ul>
+					<a href="" class="m-option-more">
+						<span class="txt">更多</span><span class="u-option-right"><i class="u-icon icon-right"></i></span>
+					</a>
+				</div>
+			</section>
+
+			<section class="m-topping g-side-section">
+				<div class="header">
+					<h3>达人排行榜</h3>
+				</div>
+				<div class="content">
+					<ul class="topping-list">
+						<li class="topping-item f-cb">
+							<div class="avatar">
+								<img src="" alt="">
+							</div>
+							<div class="user-info">
+								<div class="name">Grinch</div>
+								<div class="info">
+									<span class="works">作品 377</span>
+									<span class="fans">粉丝 1706</span>
+								</div>
+							</div>
+						</li>
+						<li class="topping-item f-cb">
+							<div class="avatar">
+								<img src="" alt="">
+							</div>
+							<div class="user-info">
+								<div class="name">Grinch</div>
+								<div class="info">
+									<span class="works">作品 377</span>
+									<span class="fans">粉丝 1706</span>
+								</div>
+							</div>
+						</li>
+						<li class="topping-item f-cb">
+							<div class="avatar">
+								<img src="" alt="">
+							</div>
+							<div class="user-info">
+								<div class="name">Grinch</div>
+								<div class="info">
+									<span class="works">作品 377</span>
+									<span class="fans">粉丝 1706</span>
+								</div>
+							</div>
+						</li>
+						<li class="topping-item f-cb">
+							<div class="avatar">
+								<img src="" alt="">
+							</div>
+							<div class="user-info">
+								<div class="name">Grinch</div>
+								<div class="info">
+									<span class="works">作品 377</span>
+									<span class="fans">粉丝 1706</span>
+								</div>
+							</div>
+						</li>
+						<li class="topping-item f-cb">
+							<div class="avatar">
+								<img src="" alt="">
+							</div>
+							<div class="user-info">
+								<div class="name">Grinch</div>
+								<div class="info">
+									<span class="works">作品 377</span>
+									<span class="fans">粉丝 1706</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<a href="" class="m-option-more"><span class="u-option-down"><i class="u-icon icon-bottom"></i></span>
+				</a>
+				</div>				
+			</section>
+
+		</div>
+	</div>
+	<!-- main end -->
+
+	<!-- 底部 -->
+	<footer class="g-footer f-cb">
+		<a href="" class="left">/友情链接/</a>
+		<a href="" class="right">/关于我们/</a>
+	</footer>
+
+	<script>
+		window.onload = function () {
+			let tabs = new App.Tabs({
+				container: document.getElementById('j_tabs'),
+			});
+			let carousel = new App.Carousel({
+				container: document.getElementById('j_banner'),
+				images: [
+				    '../common/image/banner0.jpg',
+				    '../common/image/banner1.jpg',
+				    '../common/image/banner2.jpg',
+				],
+				interval: 2000,
+			});
+		};
+</script>
+<script src="../page/app.js"></script>
+<script src="../common/utils.js"></script>
+<script src="../common/js/Tabs.js"></script>
+<script src="../common/js/Carousel.js"></script>
+<script src="../common/js/Validator.js"></script>
+<script src="../common/js/Modal.js"></script>
+<script src="../common/js/LoginModal.js"></script>
+<script src="../common/md5.js"></script>
 <script src="../page/index.js"></script>
 </body>
 </html>

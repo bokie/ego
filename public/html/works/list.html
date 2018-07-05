@@ -10,6 +10,59 @@
     <link href="../../page/works/list.css" rel="stylesheet"/>
 </head>
 <body>
+
+	<div class="g-nav">nav</div>
+	<div class="g-banner">banner</div>
+	<div class="g-body">
+		<div class="g-profile">
+			<div class="u-avatar"></div>
+			<div class="u-info">
+				<em class="name" title="Amber">Amber</em>
+				<span class="sex">
+					<em class="u-icon u-icon-female"></em>
+				</span>
+			</div>
+			<div class="u-info">
+				<em class="age">15岁</em>
+				<em class="constellation">双鱼座</em>
+				<span class="address-info">
+					<em class="u-icon u-icon-address"></em>
+					<em class="address">杭州</em>
+				</span>
+			</div>
+		</div>
+		<div class="g-main">
+			<div class="m-aside">
+				
+			</div>
+			<div class="m-works">work list</div>
+		</div>
+	</div>
+
 <script src="../../page/works/list.js"></script>
+<script>
+	(function (App) {
+		let page = {
+			init: function () {
+				this.initNav();
+			},
+			initNav: function () {
+				App.Nav.init({
+					login: function (user) {
+						// user 即当前登录的用户
+					}
+				}).bind(this);
+			},
+			initProfile: function (user) {
+
+			}
+		};
+
+		// 页面初始化
+		document.addEventListener('DOMContentLoaded', function (e) {
+			page.init();
+		});
+	})(window.App);
+</script>
 </body>
 </html>

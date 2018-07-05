@@ -1,0 +1,73 @@
+body {
+	background-color: #eee;
+}
+.container {
+	width: 340px;
+	margin: 100px auto;
+	background-color: #fff
+}
+
+.m-login {
+	background-color: #fff;
+}
+.m-login .login-header {
+	height: 60px;
+	line-height: 60px;
+}
+.m-login .login-header .title {
+	font-size: 20px;
+	color: #5ed0b6;
+}
+.m-login .login-header .register {
+	float: right;
+}
+.m-login .login-header .go-register {
+	display: inline-block;
+	color: #5ed0b6;
+}
+.m-login .login-form {}
+.m-login .login-form .account,
+.m-login .login-form .password {
+	position: relative;
+	margin: 12px 0;
+}
+.m-login .login-form .account label,
+.m-login .login-form .password label {
+	position: absolute;
+	top:0; left: 20px;
+	line-height: 40px;
+	color: #5ed0b6;
+}
+.m-login .login-form .account input,
+.m-login .login-form .password input {
+	display: block;
+	height: 40px;
+	padding: 8px 8px 8px 70px;
+	width: 100%;
+	border: 1px solid #5ed0b6;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+.m-login .login-form .account input:focus,
+.m-login .login-form .password input:focus {
+	outline: none;
+}
+.m-login .login-form .options .remember {
+	float: left;
+
+}
+.m-login .login-form .options .forgot-pass {
+	float: right;
+}
+.m-login .login-form .error-info {
+	margin: 12px 0;
+	color: #e83828;
+	font-weight: bold;
+}
+
+.m-login .login-form .btn-submit {
+	margin-bottom: 20px;
+	width: 100%;
+	font-size: 16px;
+	letter-spacing: 10px;
+}

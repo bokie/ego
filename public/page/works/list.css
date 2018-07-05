@@ -1,0 +1,32 @@
+
+.g-nav {
+	height: 90px;
+	background: #ccc;
+}
+
+.g-banner {
+	height: 250px;
+	background: #cc7832;
+}
+
+.g-body {
+	width: 850px;
+	margin: 0 auto;
+}
+.g-profile {
+	margin-top: -115px;
+	height: 216px;
+	background-color: #3759ff;
+	z-index: 99999;
+}
+.g-main {
+	position: relative;
+	height: 600px;
+	background-color: #4ca7cc;
+}
+.m-aside {
+	position: absolute;
+	left: -100px;
+	width: 100px; height: 276px;
+	background-color: #ffae35;
+}
